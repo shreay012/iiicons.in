@@ -1,0 +1,352 @@
+/* ===================================================================
+   CSR Programs page — exact Figma copy
+   Fonts: Plus Jakarta Sans (headings/buttons), Inter (hero), system
+   sans fallback standing in for "Satoshi" (not available on a free CDN).
+=================================================================== */
+
+:root {
+  --orange: #EF5523;
+  --orange-dark: #F76902;
+  --dark: #404040;
+  --darker: #2D2D2D;
+  --night-rider: #19110D;
+  --black: #000000;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Satoshi', -apple-system, sans-serif;
+  color: var(--dark);
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: none; }
+
+/* Scale wrapper: keeps the 1440px fixed design pixel-perfect on any
+   viewport by scaling the whole page down, the same way a design file
+   is viewed at different zoom levels. */
+.scale-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.page {
+  width: 1440px;
+  position: relative;
+  background: #ffffff;
+  transform-origin: top left;
+}
+
+.sec {
+  position: relative;
+  width: 1440px;
+  overflow: hidden;
+}
+
+.abs { position: absolute; }
+
+/* ---------------- Buttons ---------------- */
+.btn-om-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 4.5px;
+  padding: 14px 17px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-om-orange img { width: 18px; height: 19px; }
+.btn-om-orange:hover { background: var(--orange-dark); color: #fff; }
+
+.btn-om-pill {
+  display: inline-flex;
+  align-items: center;
+  background: var(--orange-dark);
+  border: 1px solid var(--orange);
+  color: #fff;
+  border-radius: 30px;
+  padding: 4px 13px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.btn-om-pill:hover { color: #fff; opacity: .92; }
+
+/* ---------------- Header ---------------- */
+.site-header {
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid rgba(85,85,85,.1);
+  box-shadow: 0 1px 2px rgba(19,41,75,.12);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 16px 60px 16px 80px;
+}
+.site-header .logo img { height: 30px; display: block; }
+.site-header .om-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+  justify-content: center;
+}
+.site-header .om-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 4px solid transparent;
+}
+.site-header .om-nav .nav-item.active,
+.site-header .om-nav .nav-item strong { font-weight: 700; }
+.site-header .om-nav .nav-item:hover { border-bottom-color: var(--orange); }
+.site-header .om-nav .nav-item .chev { width: 9px; height: 14px; transform: scaleY(-1) rotate(180deg); opacity: .8; }
+.site-header .cta { margin-left: 8px; }
+
+.header-mobile-toggle { display: none; }
+
+/* ---------------- Hero ---------------- */
+.sec-hero { height: 620px; background: #000; }
+.sec-hero .hero-bg {
+  position: absolute; inset: 0; width: 1440px; height: 620px; object-fit: cover;
+}
+.sec-hero .hero-shade {
+  position: absolute; left: 0; top: 181px; width: 1440px; height: 439px;
+  background: linear-gradient(to top, #000 0%, rgba(0,0,0,0) 100%);
+}
+.sec-hero .hero-caption {
+  position: absolute; left: 293px; top: 232px; width: 855px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif; font-weight: 300; font-size: 40px;
+  color: #fff; text-align: center; text-shadow: 0 4px 3.7px rgba(0,0,0,.51);
+}
+.sec-hero .hero-title-wrap { position: absolute; left: 292px; top: 195px; width: 855px; height: 48px; }
+.sec-hero .hero-title-box {
+  position: absolute; left: 161px; top: 114px; width: 535px; height: 95px;
+  background: rgba(64,64,64,.29);
+  border: 2px dashed var(--orange);
+  border-radius: 29px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 9px 45px 13px 44px;
+}
+.sec-hero .hero-title-box p {
+  margin: 0; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 60px; color: #fff; line-height: normal;
+}
+.sec-hero .hero-title-box p span.upper { text-transform: uppercase; }
+.sec-hero .hero-plane { position: absolute; left: -58px; top: 283px; width: 387px; height: 387px; }
+.sec-hero .hero-doodle { position: absolute; left: 741px; top: 446px; width: 18px; height: 19px; }
+.sec-hero .hero-btn { position: absolute; left: 624px; top: 433px; }
+
+/* ---------------- Commitments ---------------- */
+.sec-commitments { height: 658px; background: #fff; }
+.sec-commitments .bg-pattern {
+  position: absolute; left: 0; top: -128px; width: 1440px; height: 1020px; object-fit: cover; opacity: .5; pointer-events: none;
+}
+.sec-commitments .copy { position: absolute; left: 88px; top: 60px; width: 715px; }
+.sec-commitments .copy h2 {
+  font-size: 32px; font-weight: 700; margin: 0; line-height: 1.5; text-transform: capitalize;
+}
+.sec-commitments .copy h2 .brand-o { color: var(--orange); }
+.sec-commitments .copy h2.sub { font-weight: 500; color: #000; margin-bottom: 19px; }
+.sec-commitments .copy p { font-size: 18px; color: #404040; line-height: 1.5; margin: 0 0 13px; }
+.sec-commitments .copy .btn-om-orange { margin-top: 19px; }
+
+.sec-commitments .collage { position: absolute; left: 773px; top: 0; width: 667px; height: 665px; }
+.sec-commitments .collage .blk { position: absolute; }
+.sec-commitments .collage .blk img { width: 100%; height: 100%; display: block; }
+.sec-commitments .collage .icon-box {
+  position: absolute; display: flex; align-items: center; justify-content: center;
+}
+.sec-commitments .collage .icon-box img { width: 70%; height: 70%; object-fit: contain; }
+.sec-commitments .collage .photo { position: absolute; border-radius: 50%; overflow: hidden; }
+.sec-commitments .collage .photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------------- Testimonial ---------------- */
+.sec-testimonial { height: 588px; background: #fff; }
+.sec-testimonial .bg-dots {
+  position: absolute; left: 0; top: 0; width: 1440px; height: 588px;
+  background-image: radial-gradient(rgba(64,64,64,.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.sec-testimonial .chev-row { position: absolute; display: flex; gap: 8px; }
+.sec-testimonial .chev-row img { width: 24px; height: 18px; opacity: .55; }
+.sec-testimonial .quote {
+  position: absolute; left: 92px; top: 168px; width: 868px;
+  font-style: italic; font-weight: 500; font-size: 30px; color: var(--darker); line-height: 1.5; text-transform: capitalize;
+}
+.sec-testimonial .photo-card {
+  position: absolute; left: 1002px; top: 57px; width: 353px; height: 474px;
+  background: #fbefef; border-radius: 50px; overflow: hidden;
+}
+.sec-testimonial .photo-card .orange-base {
+  position: absolute; left: 0; top: 198px; width: 353px; height: 276px;
+  background: #ff6b01; border-radius: 70px 70px 0 0;
+}
+.sec-testimonial .photo-card .ceo-photo {
+  position: absolute; left: -10px; top: 64px; width: 389px; height: 422px; object-fit: cover; object-position: center top;
+}
+.sec-testimonial .photo-card .name-row {
+  position: absolute; left: 32px; top: 29px; width: 289px;
+}
+.sec-testimonial .photo-card .name-row h3 {
+  margin: 0; font-size: 25px; font-weight: 700; color: var(--orange);
+}
+.sec-testimonial .photo-card .quote-marks { display: inline-flex; gap: 2px; margin-left: 6px; vertical-align: middle; }
+.sec-testimonial .photo-card .quote-marks img { width: 14px; height: 18px; opacity: .9; }
+.sec-testimonial .photo-card .role { margin: 6px 0 0; font-size: 20px; font-style: italic; color: #000; }
+
+/* ---------------- Vision / Mission ---------------- */
+.sec-vm { height: 413px; background: #fff; }
+.sec-vm .block { position: absolute; top: 25px; width: 452px; }
+.sec-vm .block.vision { left: 91px; }
+.sec-vm .block.mission { left: 850px; width: 523px; }
+.sec-vm .block h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 45px; margin: 0 0 10px;
+}
+.sec-vm .block.vision h3 { color: var(--dark); }
+.sec-vm .block.mission h3 { color: var(--orange); }
+.sec-vm .block .rule { width: 152px; height: 6px; }
+.sec-vm .block.vision .rule { background: var(--dark); }
+.sec-vm .block.mission .rule { background: var(--orange); }
+.sec-vm .icon { position: absolute; }
+.sec-vm .center-line { position: absolute; left: 719.5px; top: 63px; width: 5px; height: 259px; background: rgba(239,85,35,.71); }
+.sec-vm .center-line2 { position: absolute; left: 719.5px; top: 63px; width: 5px; height: 58px; background: var(--dark); }
+.sec-vm .flag-top { position: absolute; left: 680px; top: 55px; width: 57px; height: 59px; }
+.sec-vm .flag-bottom { position: absolute; left: 703px; top: 112px; width: 54px; height: 59px; }
+.sec-vm .desc { position: absolute; font-size: 18px; color: var(--dark); line-height: 1.5; }
+.sec-vm .desc.vision { left: 91px; top: 184px; width: 439px; }
+.sec-vm .desc.mission { left: 850px; top: 181px; width: 523px; }
+
+/* ---------------- Our Objective ---------------- */
+.sec-objective { height: 529px; background: linear-gradient(180deg, #fff3ef 0%, #ffffff 100%); }
+.sec-objective .illustration { position: absolute; left: 261px; top: 1px; width: 764px; height: 478px; object-fit: contain; }
+.sec-objective h2 {
+  position: absolute; left: 516px; top: 299px; width: 300px; height: 48px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 38px; color: var(--orange); margin: 0;
+  display: flex; align-items: center;
+}
+.sec-objective p {
+  position: absolute; left: 516px; top: 370px; width: 736px;
+  font-size: 18px; color: var(--dark); line-height: 1.5; margin: 0;
+}
+
+/* ---------------- SDG / Social Initiative ---------------- */
+.sec-sdg { height: 750px; }
+.sec-sdg .half-left { position: absolute; left: 0; top: 0; width: 720px; height: 750px; background: #fff; }
+.sec-sdg .half-right {
+  position: absolute; left: 720px; top: 0; width: 720px; height: 750px; background: #f5f5f5;
+  background-image: radial-gradient(rgba(64,64,64,.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.sec-sdg .wheel-img { position: absolute; left: 0; top: 0; width: 720px; height: 750px; }
+.sec-sdg .vs-icon { position: absolute; left: 670px; top: 303px; width: 100px; z-index: 2; }
+.sec-sdg h2.sdg-title {
+  position: absolute; left: 752px; top: 70px; width: 537px;
+  font-weight: 700; font-size: 38px; color: var(--dark); margin: 0; line-height: 1.13; text-transform: capitalize;
+}
+.sec-sdg .sdg-item { position: absolute; left: 825px; display: flex; align-items: center; gap: 24px; }
+.sec-sdg .sdg-item .ic {
+  width: 100px; height: 100px; flex: none; background: #fff; border-radius: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,.25); display: flex; align-items: center; justify-content: center;
+}
+.sec-sdg .sdg-item .ic img { width: 54px; height: 54px; }
+.sec-sdg .sdg-item p { width: 425px; font-size: 16px; color: #000; margin: 0; line-height: 1.5; text-transform: capitalize; }
+
+/* ---------------- Social Initiatives / Our Focus Area ---------------- */
+.sec-focus { height: 1011px; background: #fff; }
+.sec-focus .head {
+  position: absolute; left: 50%; top: 60px; transform: translateX(-50%); width: 1240px; text-align: center;
+}
+.sec-focus .head h2 {
+  font-weight: 700; font-size: 32px; color: var(--dark); margin: 0 0 16px; text-transform: capitalize;
+}
+.sec-focus .head p {
+  font-size: 18px; color: rgba(64,64,64,.8); margin: 0 auto; width: 920px; line-height: normal;
+}
+.sec-focus .circle {
+  position: absolute; left: 88px; top: 370px; width: 361px; height: 361px; border-radius: 50%;
+  background: #fff; box-shadow: 0 0 4.15px rgba(0,0,0,.25);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.sec-focus .circle h3 { font-weight: 700; font-size: 50px; color: #000; margin: 0; text-transform: capitalize; }
+.sec-focus .circle h3 .accent { color: var(--orange); display: block; }
+.sec-focus .icon-node {
+  position: absolute; left: 519px; width: 100px; height: 100px; background: #fff; border-radius: 20px;
+  box-shadow: 0 0 2px rgba(0,0,0,.25); display: flex; align-items: center; justify-content: center;
+}
+.sec-focus .icon-node img { width: 60px; height: 60px; }
+.sec-focus .conn-line { position: absolute; }
+.sec-focus .feature { position: absolute; left: 651px; width: 721px; }
+.sec-focus .feature h4 { font-weight: 500; font-size: 25px; color: #000; margin: 0 0 6px; text-transform: capitalize; }
+.sec-focus .feature .lead { color: var(--orange); font-size: 24px; display: block; margin-bottom: 4px; }
+.sec-focus .feature p.body { font-size: 18px; color: rgba(64,64,64,.8); margin: 0; width: 699px; line-height: normal; }
+.sec-focus .swirl { position: absolute; left: 265px; top: 781px; width: 246px; height: 234px; opacity: .8; }
+
+/* ---------------- Carousels (CSR resources / Social gallery) ---------------- */
+.sec-carousel { height: 504px; background: #fff; position: relative; }
+.sec-carousel .bg-pattern { position: absolute; inset: 0; width: 1440px; height: 504px; opacity: .05; object-fit: cover; }
+.sec-carousel .blob {
+  position: absolute; border-radius: 0;
+  background: linear-gradient(260.99deg, rgba(69,24,126,0) 73.887%, rgba(69,24,126,.1) 93.16%);
+  transform: rotate(45deg);
+}
+.sec-carousel .blob.b1 { left: 222px; top: -244px; width: 1475px; height: 1475px; }
+.sec-carousel .blob.b2 { left: 892px; top: 335px; width: 910px; height: 910px; }
+.sec-carousel .intro { position: absolute; left: 94px; top: 213px; width: 490px; }
+.sec-carousel .intro h2 { font-weight: 700; font-size: 36px; color: #000; margin: 0 0 6px; }
+.sec-carousel .intro p { font-weight: 500; font-size: 18px; color: rgba(64,64,64,.8); margin: 0; }
+.sec-carousel .track {
+  position: absolute; left: 614px; top: 132px; width: 764px; height: 372px;
+  display: flex; gap: 22px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none;
+}
+.sec-carousel .track::-webkit-scrollbar { display: none; }
+.sec-carousel .card { flex: 0 0 240px; width: 240px; }
+.sec-carousel .card .thumb {
+  position: relative; width: 240px; height: 203px; border-radius: 16px; overflow: hidden; background: #ddd;
+}
+.sec-carousel .card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sec-carousel .card .thumb::after {
+  content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.45));
+}
+.sec-carousel .card .play-btn {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 54px; height: 54px; z-index: 2;
+}
+.sec-carousel .card .cap { font-weight: 500; font-size: 18px; color: #000; margin-top: 12px; text-transform: capitalize; line-height: 1.3; }
+.sec-carousel .nav-arrow {
+  position: absolute; top: 428px; width: 36px; height: 36px; border: 1px solid rgba(64,64,64,.15);
+  border-radius: 120px; display: flex; align-items: center; justify-content: center; background: #fff; cursor: pointer;
+}
+.sec-carousel .nav-arrow img { width: 16px; height: 16px; }
+.sec-carousel .nav-arrow.prev { left: 1262px; }
+.sec-carousel .nav-arrow.prev img { transform: rotate(180deg); }
+.sec-carousel .nav-arrow.next { left: 1314px; }
+.sec-carousel .nav-arrow:hover { background: #f5f5f5; }
+
+/* ---------------- CSR Presence (maps) ---------------- */
+.sec-maps { height: 945px; background: #2c0e52; }
+.sec-maps img { width: 1440px; height: 945px; object-fit: cover; display: block; }
+
+/* ---------------- Footer-ish spacing fix ---------------- */
+.sec:last-child { margin-bottom: 0; }
+
+/* Responsive note: the page is authored at a fixed 1440px design width
+   and scaled uniformly via JS (see assets/js/main.js) to stay pixel
+   identical to the Figma source on any screen size. */
